@@ -42,7 +42,7 @@ Download pyengine source
 
 ~~~bash
 cd /opt/
-git clone https://github.com/pyengine/pyengine.git ${PROJECT}
+git clone https://github.com/pyengine/pyengine-openvpn.git ${PROJECT}
 ~~~
 
 ## Update python module path environment
@@ -147,7 +147,7 @@ python manage.py migrate
 
 ## Update OpenVPN script
 
-edit /etc/openvpn/easy-rsa/pyengine-build.key.sh
+edit /etc/openvpn/easy-rsa/pyengine-build-key.sh
 
 ~~~text
 #! /bin/bash
@@ -165,7 +165,7 @@ update permission
 
 ~~~bash
 chmod 755 /etc/openvpn/easy-rsa/pyengine-build-key.sh
-echo "www-data ALL=(/etc/openvpn/easy-rsa/pyengine-build-key.sh) NOPASSWD: ALL" > /etc/sudoers
+echo "www-data ALL=(/etc/openvpn/easy-rsa/pyengine-build-key.sh) NOPASSWD: ALL" >> /etc/sudoers
 ~~~
 
 ## Update static directory for key save
